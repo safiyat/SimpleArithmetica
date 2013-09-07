@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalcWindow</class>
+ <widget class="QDialog" name="CalcWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>361</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CalcWindow</string>
+  </property>
+  <widget class="QPushButton" name="divButton">
+   <property name="geometry">
+    <rect>
+     <x>284</x>
+     <y>106</y>
+     <width>95</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DIVIDE</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="num2Edit">
+   <property name="geometry">
+    <rect>
+     <x>274</x>
+     <y>6</y>
+     <width>113</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDialableCharactersOnly|Qt::ImhDigitsOnly</set>
+   </property>
+   <property name="maxLength">
+    <number>16</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="resEdit">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>151</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>BlankCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDialableCharactersOnly|Qt::ImhDigitsOnly</set>
+   </property>
+   <property name="maxLength">
+    <number>32</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="placeholderText">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clrButton">
+   <property name="geometry">
+    <rect>
+     <x>154</x>
+     <y>56</y>
+     <width>95</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CLEAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="subButton">
+   <property name="geometry">
+    <rect>
+     <x>284</x>
+     <y>56</y>
+     <width>95</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SUBTRACT</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mulButton">
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>106</y>
+     <width>95</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>MULTIPLY</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="num1Edit">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>6</y>
+     <width>113</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDialableCharactersOnly|Qt::ImhDigitsOnly</set>
+   </property>
+   <property name="maxLength">
+    <number>16</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addButton">
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>56</y>
+     <width>95</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ADD</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="closeButton">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>152</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CLOSE</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="preSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>150</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::UpDownArrows</enum>
+   </property>
+   <property name="maximum">
+    <number>10</number>
+   </property>
+   <property name="value">
+    <number>2</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="preLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>67</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Precision</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>256</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="textElideMode">
+    <enum>Qt::ElideLeft</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="setInput1Button">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>220</y>
+     <width>95</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Set Input1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="setInput2Button">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>290</y>
+     <width>95</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Set Input2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>255</y>
+     <width>95</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>CLEAR HISTORY</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>num1Edit</tabstop>
+  <tabstop>num2Edit</tabstop>
+  <tabstop>addButton</tabstop>
+  <tabstop>subButton</tabstop>
+  <tabstop>mulButton</tabstop>
+  <tabstop>divButton</tabstop>
+  <tabstop>preSpinBox</tabstop>
+  <tabstop>clrButton</tabstop>
+  <tabstop>closeButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>160</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>add()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>140</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mulButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>mul()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>subButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>sub()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>315</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>divButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>div()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>312</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>123</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clrButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>clr()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>preSpinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>prec()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>263</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>setInput1Button</sender>
+   <signal>clicked()</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>setIp1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>332</x>
+     <y>233</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>setInput2Button</sender>
+   <signal>clicked()</signal>
+   <receiver>CalcWindow</receiver>
+   <slot>setIp2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>386</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>listWidget</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>276</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>add()</slot>
+  <slot>sub()</slot>
+  <slot>mul()</slot>
+  <slot>div()</slot>
+  <slot>clr()</slot>
+  <slot>prec()</slot>
+  <slot>setIp1()</slot>
+  <slot>setIp2()</slot>
+ </slots>
+</ui>
